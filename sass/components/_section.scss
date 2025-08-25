@@ -1,0 +1,32 @@
+.element{
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+.element__container {
+    margin-left: auto;
+    margin-right: auto;
+    
+    @media screen and (max-width: 767px) {
+        width: 480px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+        
+    @media screen and (min-width: 768px) {
+        width: 768px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
+    }
+
+}
+.element__title {
+    color: $primaryTextColor;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+}

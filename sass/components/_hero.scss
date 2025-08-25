@@ -1,0 +1,60 @@
+.section-hero {
+    max-width: 1600px;
+    background-image: url(/images/overlay.jpg);
+    background-position: center;
+
+}
+
+.hero-container {
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+}
+
+.section-hero__title {
+    color: $primaryBackgraundColor;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 60px;
+    letter-spacing: 6%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.section-hero__btn {
+    color: $primaryBackgraundColor;
+    background-color: $hoverColor;
+    border: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 6%;
+    text-align: center;
+
+
+    padding: 10px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+}
+
+.section-hero__btn {
+    &.send {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & svg{
+            margin-left: 10px;
+        }
+        @media screen and (max-width: 767px) {
+            margin-top: 20px;
+        }
+    }
+    
+}
