@@ -19,36 +19,78 @@
       <div class="container-header">
         <nav class="container-menu">
           <a href="./index.html" class="logo">Web<span>Studio</span></a>
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="./index.html">Студія</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="#">Контакти</a>
-            </li>
-          </ul>
+          <button
+            class="menu-button"
+            data-menu-button
+            aria-expanded="false"
+            aria-controls="menu-container"
+          >
+            <svg width="40px" height="40px" aria-label="Перемикач меню">
+              <use class="icon-menu" href="./images/icons.svg#icon-phone"></use>
+              <use
+                class="icon-close"
+                href="./images/icons.svg#icon-close"
+              ></use>
+            </svg>
+          </button>
+          <div class="site-nav" id="menu-container" data-menu>
+            <ul class="site-nav__list">
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="./index.html">Студія</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Контакти</a>
+              </li>
+            </ul>
+            <ul class="button-list">
+              <li class="button-item">
+                <button type="button" class="button-header">
+                  <svg class="button-icon">
+                    <use href="./images/icons.svg#icon-mail"></use>
+                  </svg>
+                  info@devstudio.com
+                </button>
+              </li>
+              <li class="button-item">
+                <button type="button" class="button-header">
+                  <svg class="button-icon">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </button>
+              </li>
+            </ul>
+            <ul class="header-networks">
+              <li class="header-networks__item">
+                <a
+                  href="https://www.instagram.com/"
+                  class="header-networks__link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="header-networks__item">
+                <a href="https://x.com/" class="header-networks__link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="header-networks__item">
+                <a
+                  href="https://www.facebook.com/login/?locale=uk_UA"
+                  class="header-networks__link"
+                  >Facebook</a
+                >
+              </li>
+              <li class="header-networks__item">
+                <a href="https://ua.linkedin.com/" class="header-networks__link"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
         </nav>
-        <ul class="button-list">
-          <li class="button-item">
-            <button type="button" class="button-header">
-              <svg class="button-icon">
-                <use href="./images/icons.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com
-            </button>
-          </li>
-          <li class="button-item">
-            <button type="button" class="button-header">
-              <svg class="button-icon">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </button>
-          </li>
-        </ul>
       </div>
     </header>
     <main>
@@ -78,7 +120,19 @@
                 функціоналу та сервісів. Все це дозволить відвідувачу отримати
                 вичерпні відомості про компанію чи приватну особу.
               </p>
-              <img src="./images/card1.jpg" alt="picture" width="100%" />
+              <img
+                srcset="
+                  ./images/portfolio/card-1.mobile.jpg   480w,
+                  ./images/portfolio/card-1.tablet.jpg   768w,
+                  ./images/portfolio/card-1.desktop.jpg 1200w
+                "
+                sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 100vw, 
+                (min-width: 769px) 1200px"
+                src="./images/portfolio/card-1.mobile.jpg"
+                alt="picture"
+                width="100%"
+              />
               <p class="card__name">Технокряк</p>
               <p class="card__btn">Веб-сайт</p>
             </li>
@@ -88,7 +142,19 @@
                 функціоналу та сервісів. Все це дозволить відвідувачу отримати
                 вичерпні відомості про компанію чи приватну особу.
               </p>
-              <img src="./images/card2.jpg" alt="picture" width="100%" />
+              <img
+                srcset="
+                  ./images/portfolio/card-2.mobile.jpg   480w,
+                  ./images/portfolio/card-2.tablet.jpg   768w,
+                  ./images/portfolio/card-2.desktop.jpg 1200w
+                "
+                sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 100vw, 
+                (min-width: 769px) 1200px"
+                src="./images/portfolio/card-2.mobile.jpg"
+                alt="picture"
+                width="100%"
+              />
               <p class="card__name">Постер New Orlean vs Golden Star</p>
               <p class="card__btn">Дизайн</p>
             </li>
@@ -98,7 +164,19 @@
                 функціоналу та сервісів. Все це дозволить відвідувачу отримати
                 вичерпні відомості про компанію чи приватну особу.
               </p>
-              <img src="./images/card3.jpg" alt="picture" width="100%" />
+              <img
+                srcset="
+                  ./images/portfolio/card-3.mobile.jpg   480w,
+                  ./images/portfolio/card-3.tablet.jpg   768w,
+                  ./images/portfolio/card-3.desktop.jpg 1200w
+                "
+                sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 100vw, 
+                (min-width: 769px) 1200px"
+                src="./images/portfolio/card-3.mobile.jpg"
+                alt="picture"
+                width="100%"
+              />
               <p class="card__name">Ресторан Seafood</p>
               <p class="card__btn">Додаток</p>
             </li>
@@ -108,7 +186,16 @@
                 функціоналу та сервісів. Все це дозволить відвідувачу отримати
                 вичерпні відомості про компанію чи приватну особу.
               </p>
-              <img src="./images/card4.jpg" alt="picture" width="100%" />
+              <img
+                srcset="
+                  ./images/portfolio/card-4.mobile.jpg   480w,
+                  ./images/portfolio/card-4.tablet.jpg   768w,
+                  ./images/portfolio/card-4.desktop.jpg 1200w
+                "
+                src="./images/portfolio/card-4.mobile.jpg"
+                alt="picture"
+                width="100%"
+              />
               <p class="card__name">Проєкт Prime</p>
               <p class="card__btn">Маркетинг</p>
             </li>
@@ -118,7 +205,19 @@
                 функціоналу та сервісів. Все це дозволить відвідувачу отримати
                 вичерпні відомості про компанію чи приватну особу.
               </p>
-              <img src="./images/card5.jpg" alt="picture" width="100%" />
+              <img
+                srcset="
+                  ./images/portfolio/card-5.mobile.jpg   480w,
+                  ./images/portfolio/card-5.tablet.jpg   768w,
+                  ./images/portfolio/card-5.desktop.jpg 1200w
+                "
+                sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 100vw, 
+                (min-width: 769px) 1200px"
+                src="./images/portfolio/card-5.mobile.jpg"
+                alt="picture"
+                width="100%"
+              />
               <p class="card__name">Проєкт Boxes</p>
               <p class="card__btn">Додаток</p>
             </li>
@@ -128,7 +227,19 @@
                 функціоналу та сервісів. Все це дозволить відвідувачу отримати
                 вичерпні відомості про компанію чи приватну особу.
               </p>
-              <img src="./images/card6.jpg" alt="picture" width="100%" />
+              <img
+                srcset="
+                  ./images/portfolio/card-6.mobile.jpg   480w,
+                  ./images/portfolio/card-6.tablet.jpg   768w,
+                  ./images/portfolio/card-6.desktop.jpg 1200w
+                "
+                sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 100vw, 
+                (min-width: 769px) 1200px"
+                src="./images/portfolio/card-6.mobile.jpg"
+                alt="picture"
+                width="100%"
+              />
               <p class="card__name">Inspiration has no Borders</p>
               <p class="card__btn">Веб-сайт</p>
             </li>
@@ -138,7 +249,19 @@
                 функціоналу та сервісів. Все це дозволить відвідувачу отримати
                 вичерпні відомості про компанію чи приватну особу.
               </p>
-              <img src="./images/card7.jpg" alt="picture" width="100%" />
+              <img
+                srcset="
+                  ./images/portfolio/card-7.mobile.jpg   480w,
+                  ./images/portfolio/card-7.tablet.jpg   768w,
+                  ./images/portfolio/card-7.desktop.jpg 1200w
+                "
+                sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 100vw, 
+                (min-width: 769px) 1200px"
+                src="./images/portfolio/card-7.mobile.jpg"
+                alt="picture"
+                width="100%"
+              />
               <p class="card__name">Видання Limited Edition</p>
               <p class="card__btn">Дизайн</p>
             </li>
@@ -148,7 +271,19 @@
                 функціоналу та сервісів. Все це дозволить відвідувачу отримати
                 вичерпні відомості про компанію чи приватну особу.
               </p>
-              <img src="./images/card8.jpg" alt="picture" width="100%" />
+              <img
+                srcset="
+                  ./images/portfolio/card-8.mobile.jpg   480w,
+                  ./images/portfolio/card-8.tablet.jpg   768w,
+                  ./images/portfolio/card-8.desktop.jpg 1200w
+                "
+                sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 100vw, 
+                (min-width: 769px) 1200px"
+                src="./images/portfolio/card-8.mobile.jpg"
+                alt="picture"
+                width="100%"
+              />
               <p class="card__name">Видання Limited Edition</p>
               <p class="card__btn">Маркетинг</p>
             </li>
@@ -158,7 +293,19 @@
                 функціоналу та сервісів. Все це дозволить відвідувачу отримати
                 вичерпні відомості про компанію чи приватну особу.
               </p>
-              <img src="./images/card9.jpg" alt="picture" width="100%" />
+              <img
+                srcset="
+                  ./images/portfolio/card-9.mobile.jpg   480w,
+                  ./images/portfolio/card-9.tablet.jpg   768w,
+                  ./images/portfolio/card-9.desktop.jpg 1200w
+                "
+                sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 100vw, 
+                (min-width: 769px) 1200px"
+                src="./images/portfolio/card-9.mobile.jpg"
+                alt="picture"
+                width="100%"
+              />
               <p class="card__name">Growing Business</p>
               <p class="card__btn">Додаток</p>
             </li>
@@ -246,4 +393,5 @@
       </div>
     </footer>
   </body>
+  <script src="./js/menu.js"></script>
 </html>

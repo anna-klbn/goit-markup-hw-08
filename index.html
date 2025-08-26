@@ -19,7 +19,12 @@
       <div class="container-header">
         <nav class="container-menu">
           <a href="./index.html" class="logo">Web<span>Studio</span></a>
-          <button class="menu-button" data-menu-button aria-expanded="false">
+          <button
+            class="menu-button"
+            data-menu-button
+            aria-expanded="false"
+            aria-controls="menu-container"
+          >
             <svg width="40px" height="40px" aria-label="Перемикач меню">
               <use class="icon-menu" href="./images/icons.svg#icon-phone"></use>
               <use
@@ -28,36 +33,64 @@
               ></use>
             </svg>
           </button>
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="./index.html">Студія</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="#">Контакти</a>
-            </li>
-          </ul>
+          <div class="site-nav" id="menu-container" data-menu>
+            <ul class="site-nav__list">
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="./index.html">Студія</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Контакти</a>
+              </li>
+            </ul>
+            <ul class="button-list">
+              <li class="button-item">
+                <button type="button" class="button-header">
+                  <svg class="button-icon">
+                    <use href="./images/icons.svg#icon-mail"></use>
+                  </svg>
+                  info@devstudio.com
+                </button>
+              </li>
+              <li class="button-item">
+                <button type="button" class="button-header">
+                  <svg class="button-icon">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </button>
+              </li>
+            </ul>
+            <ul class="header-networks">
+              <li class="header-networks__item">
+                <a
+                  href="https://www.instagram.com/"
+                  class="header-networks__link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="header-networks__item">
+                <a href="https://x.com/" class="header-networks__link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="header-networks__item">
+                <a
+                  href="https://www.facebook.com/login/?locale=uk_UA"
+                  class="header-networks__link"
+                  >Facebook</a
+                >
+              </li>
+              <li class="header-networks__item">
+                <a href="https://ua.linkedin.com/" class="header-networks__link"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
         </nav>
-        <ul class="button-list">
-          <li class="button-item">
-            <button type="button" class="button-header">
-              <svg class="button-icon">
-                <use href="./images/icons.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com
-            </button>
-          </li>
-          <li class="button-item">
-            <button type="button" class="button-header">
-              <svg class="button-icon">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </button>
-          </li>
-        </ul>
       </div>
     </header>
     <main>
@@ -163,7 +196,19 @@
           <h2 class="element__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img src="./images/Ігор.jpg" alt="photo" width="270px" />
+              <img
+                srcset="
+                  ./images/team/team.card-1.mobile.jpg   480w,
+                  ./images/team/team.card-1.tablet.jpg   768w,
+                  ./images/team/team.card-1.desktop.jpg 1200w
+                "
+                sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 100vw
+                (min-width: 1200px) 1200px"
+                src="./images/team/team.card-1.mobile.jpg"
+                alt="photo"
+                width="100%"
+              />
               <p class="team__name">Ігор Дем'яненко</p>
               <p class="team__profession">Product Designer</p>
               <ul class="networks">
@@ -201,7 +246,19 @@
               </ul>
             </li>
             <li class="team__item">
-              <img src="./images/Ольга.jpg" alt="photo" width="270px" />
+              <img
+                srcset="
+                  ./images/team/team.card-2.mobile.jpg   480w,
+                  ./images/team/team.card-2.tablet.jpg   768w,
+                  ./images/team/team.card-2.desktop.jpg 1200w
+                "
+                sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 100vw
+                (min-width: 1200px) 1200px"
+                src="./images/team/team.card-2.mobile.jpg"
+                alt="photo"
+                width="100%"
+              />
               <p class="team__name">Ольга Рєпіна</p>
               <p class="team__profession">Frontend Developer</p>
               <ul class="networks">
@@ -239,7 +296,19 @@
               </ul>
             </li>
             <li class="team__item">
-              <img src="./images/Микола.jpg" alt="photo" width="270px" />
+              <img
+                srcset="
+                  ./images/team/team.card-3.mobile.jpg   480w,
+                  ./images/team/team.card-3.tablet.jpg   768w,
+                  ./images/team/team.card-3.desktop.jpg 1200w
+                "
+                sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 100vw
+                (min-width: 1200px) 1200px"
+                src="./images/team/team.card-3.mobile.jpg"
+                alt="photo"
+                width="100%"
+              />
               <p class="team__name">Микола Тарасов</p>
               <p class="team__profession">Marketing</p>
               <ul class="networks">
@@ -277,7 +346,19 @@
               </ul>
             </li>
             <li class="team__item">
-              <img src="./images/Михайло.jpg" alt="photo" width="270px" />
+              <img
+                srcset="
+                  ./images/team/team.card-4.mobile.jpg   480w,
+                  ./images/team/team.card-4.tablet.jpg   768w,
+                  ./images/team/team.card-4.desktop.jpg 1200w
+                "
+                sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 100vw
+                (min-width: 1200px) 1200px"
+                src="./images/team/team.card-4.mobile.jpg"
+                alt="photo"
+                width="100%"
+              />
               <p class="team__name">Михайло Єрмаков</p>
               <p class="team__profession">UI Designer</p>
               <ul class="networks">
