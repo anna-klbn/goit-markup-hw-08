@@ -1,29 +1,61 @@
 .section-hero {
-    max-width: 1600px;
-    background-image: url(/images/overlay/overlay.decktop.jpg);
+    
+    background-image: url(/images/overlay/overlay.mobile.jpg);
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+        margin-left: auto;
+            margin-right: auto;
 
+    @media screen and (max-width:768px){
+        background-image: url(/images/overlay/overlay.mobile.2x.jpg);
+        padding-top: 118px;
+        padding-bottom: 118px;
+        max-width: 480px;
+        @media (min-resolution: 2dppx) {
+            background-image: url(/images/overlay/overlay.mobile.2x.jpg);
+        }
+    }
+  
+    @media screen and (min-width:768px)and (max-width:1200px) {
+        max-width: 768px;
+        background-image: url(/images/overlay/overlay.tablet.jpg);
+        padding-top: 118px;
+        padding-bottom: 118px;
+        @media (min-resolution: 2dppx) {
+                background-image: url(/images/overlay/overlay.tablet.2x.jpg);
+        }
+    }
+    @media screen and (min-width:1200px){
+        max-width: 1600px;
+       
+        background-image: url(/images/overlay/overlay.decktop.jpg);
+        padding-top: 200px;
+        padding-bottom: 200px;
+    @media (min-resolution: 2dppx) {
+            background-image: url(/images/overlay/overlay.decktop.2x.jpg);
+        }
+    }
 }
 
 .hero-container {
-
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0 15px;
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
-
 }
 
 .section-hero__title {
     color: $primaryBackgraundColor;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 60px;
+    font-size: 26px;
+    line-height: 42px;
     letter-spacing: 6%;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 30px;
+        @media screen and (min-width:1200px) {
+            font-size: 44px;
+            line-height: 60px;
+        }
 }
 
 .section-hero__btn {
@@ -49,10 +81,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: 1199px) {
+            margin-top: 20px;
+            }
         & svg{
             margin-left: 10px;
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 768px) {
             margin-top: 20px;
         }
     }
